@@ -35,14 +35,7 @@ tags = {
 }
 
 }
-resource "aws_subnet" "kp-subnet" {
-  vpc_id                  = aws_vpc.Terraform_VPC.id
-  cidr_block              = var.subnetCIDRblock_kp
-  map_public_ip_on_launch = var.mapPublicIP
-  availability_zone       = var.availabilityZone
-tags = {
-   Name = "kp-subnet"
-}
+
 
 }
 
