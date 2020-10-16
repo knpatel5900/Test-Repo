@@ -24,7 +24,14 @@ resource "aws_subnet" "private_subnet" {
 tags = {
    Name = "private_subnet"
 }
-
+resource "aws_subnet" "my_subnet" {
+  vpc_id                  = aws_vpc.Terraform_VPC.id
+  cidr_block              = var.subnetCIDRblock_my
+  map_public_ip_on_launch = var.mapPublicIP
+  availability_zone       = var.availabilityZone
+tags = {
+   Name = "my_subnet"
+}
 
 }
 
