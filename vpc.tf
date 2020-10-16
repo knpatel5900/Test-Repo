@@ -35,6 +35,16 @@ tags = {
 }
 
 }
+resource "aws_subnet" "kishan" {
+  vpc_id                  = aws_vpc.Terraform_VPC.id
+  cidr_block              = var.subnetCIDRblock_kishan
+  map_public_ip_on_launch = var.mapPublicIP
+  availability_zone       = var.availabilityZone
+tags = {
+   Name = "kishan"
+}
+
+}
 
 
 output "Name" {
