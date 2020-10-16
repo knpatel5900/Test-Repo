@@ -37,8 +37,6 @@ tags = {
 }
 
 
-}
-
 output "Name" {
   value = aws_vpc.Terraform_VPC.tags
    description  = "This Name of VPC"
